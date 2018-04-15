@@ -20,12 +20,12 @@ u  ACT_RU_* : “RU”代表“Runtime”（运行时），这些表中保存一
 
 
 # 2)springCloud相关文档  
-## springCloud简介:
+# springCloud简介:
 springcloud为开发人员提供了快速构建分布式系统的一些工具，包括配置管理、服务发现、断路器、路由、微代理、事件总线、全局锁、决策竞选、分布式会话等等。它运行环境简单，可以在开发人员的电脑上跑。  
-# 服务的注册与发现（Eureka） 
+## 服务的注册与发现（Eureka） 
 eureka是一个高可用的组件，它没有后端缓存，每一个实例注册之后需要向注册中心发送心跳（因此可以在内存中完成）。  
 当client向server注册时，它会提供一些元数据，例如主机和端口，URL，主页等。可以在server中对所有注册的client进行监控与管理，Eureka server 从每个client实例接收心跳消息。 如果心跳超时，则通常将该实例从注册server中删除。  
-# 服务消费者（Feign）   
+## 服务消费者（Feign）   
 Feign是一个声明式的伪Http客户端，它使得写Http客户端变得更简单。使用Feign，只需要创建一个接口并注解。它具有可插拔的注解特性，可使用Feign 注解和JAX-RS注解。Feign支持可插拔的编码器和解码器。Feign默认集成了Ribbon，并和Eureka结合，默认实现了负载均衡的效果。
 并且可以@FeignClient注解消费指定的模块或服务。  
 
